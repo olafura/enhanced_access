@@ -4,7 +4,7 @@ defmodule EnhancedAccess.MixProject do
   def project do
     [
       app: :enhanced_access,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.6",
       description: "Allow for more complex Access pattern than is available by default in Elixir",
       package: package(),

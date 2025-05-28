@@ -97,7 +97,8 @@ defmodule EnhancedAccess do
       iex> pop_in(%{a: %{b: 1}, c: %{b: 2}, d: %{b: 3}}, [EnhancedAccess.skip_keys([:d]), :b])
       {[1, 2], %{a: %{}, c: %{}, d: %{b: 3}}}
   """
-  @spec skip_keys(keys :: list) :: Access.access_fun(data :: Access.container(), current_value :: term)
+  @spec skip_keys(keys :: list) ::
+          Access.access_fun(data :: Access.container(), current_value :: term)
   def skip_keys(keys) when is_list(keys) do
     &skip_keys(&1, &2, &3, keys)
   end
